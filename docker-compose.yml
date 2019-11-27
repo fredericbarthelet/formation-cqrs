@@ -90,5 +90,11 @@ services:
       - "8443:8443"
       - "8444:8444"
 
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+
 volumes:
   db-data: {}
